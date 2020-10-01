@@ -18,8 +18,10 @@ Write a function "crazySum" which receives two given integers. If the two values
 */
 /* WRITE YOUR CODE HERE */
 
+//(https://medium.com/javascript-in-plain-english/how-to-check-for-a-number-in-javascript-8d9024708153#:~:text=The%20easiest%20way%20to%20check,%2C%20Infinity%20%2C%20and%20%2DInfinity%20.)
+//checking if a number is not NaN
 const crazySum= (i1, i2) =>{
-    return (typeof i1 === 'number' && i1 ===i2) ? i1*6 : "Not a number or numbers not equal"; 
+    return ((typeof i1 === 'number') && (i1 ===i2) && (i1 === Number(i1))) ? i1*6 : "Not a number or numbers not equal"; 
 }
 
 /* EXERCISE 3
@@ -29,13 +31,12 @@ Returns triple their absolute difference if
 the specified
 number is greater than 19.
 */
-/* WRITE YOUR CODE HERE */
-const diff = 19;
+/* WRITE YOUR diffCODE HERE */
+const  const_diff= 19;
 const crazyDiff= (num) => {
 
-  return ( num <= diff) ? Math.abs(num-diff) : 3*Math.abs(num-diff);
+  return ( num <= const_diff) ? Math.abs(num-const_diff) : 3*Math.abs(num-const_diff);
 }
-
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer N and returns true if N is within 20 and 100 (included) or equal to 400.
@@ -102,7 +103,7 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 /* WRITE YOUR CODE HERE */
 
 const upperFirst= (S) =>{
-    var words= S.toLowerCase().split(" ");
+    let words= S.toLowerCase().split(" ");
 
     for(i=0; i<words.length; i++) {
 
