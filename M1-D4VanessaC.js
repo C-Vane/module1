@@ -149,4 +149,4 @@ console.log("EXERCISE 6", check3and7(10));
 console.log("EXERCISE 7", reverseString("Hello World"));
 console.log("EXERCISE 8", upperFirst("strivers rule"));
 console.log("EXERCISE 9", cutString("Die Hard"));
-console.log("EXERCISE 10", giveMeRandom(10));
+console.log("EXERCISE 10", giveMeRandom(5));
