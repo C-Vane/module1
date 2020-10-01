@@ -30,7 +30,7 @@ the specified
 number is greater than 19.
 */
 /* WRITE YOUR CODE HERE */
-let diff = 19;
+const diff = 19;
 const crazyDiff= (num) => {
 
   return ( num <= diff) ? Math.abs(num-diff) : 3*Math.abs(num-diff);
@@ -67,10 +67,10 @@ HINT: Module Operator
 const check3and7 = (N) => {
     let check;
     switch(N) {
-        case (N%3 === 0):
+        case (N%3 === 0 && N>=0):
             check="The number is multiple of 3";
             break;
-        case (N%7 === 0):
+        case (N%7 === 0 && N>=0):
             check="The number is multiple of 7";
             break;
         default: 
@@ -103,7 +103,9 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 
 const upperFirst= (S) =>{
     var words= S.toLowerCase().split(" ");
+
     for(i=0; i<words.length; i++) {
+
         words[i]= words[i].charAt(0).toUpperCase()+ words[i].slice(1);
     }
 
@@ -117,7 +119,7 @@ Write a function "cutString" to create a new string without the first and last c
 
 /* WRITE YOUR CODE HERE */
 
-const cutString= (S) => S.substring(1, S.length-1); 
+const cutString= (S) => S.substring(1, S.length-2); 
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
@@ -125,7 +127,13 @@ Write a function "giveMeRandom" which accepts a number n and returns an array co
 
 /* WRITE YOUR CODE HERE */
 
-const giveMeRandom = (n)=> Math.floor(Math.random()*10);  
+const giveMeRandom = (n)=> {
+    let arr=[];
+    for(i=0; i<n; i++){
+        arr.push(Math.floor(Math.random()*10));
+    }
+    return(arr);
+};  
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
@@ -141,4 +149,4 @@ console.log("EXERCISE 6", check3and7(10));
 console.log("EXERCISE 7", reverseString("Hello World"));
 console.log("EXERCISE 8", upperFirst("strivers rule"));
 console.log("EXERCISE 9", cutString("Die Hard"));
-console.log("EXERCISE 10",giveMeRandom(2));
+console.log("EXERCISE 10", giveMeRandom(10));
